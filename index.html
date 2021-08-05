@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Menu</title>
+  <!-- fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/16cf11a318.js" crossorigin="anonymous"></script>
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo-area">
+        <a href="#">
+          <h2>MERN</h2>
+        </a>
+      </div>
+        <input type="checkbox" id="menu-icon">
+        <label for="menu-icon" class="icon">
+          <i class="fas fa-bars" ></i>
+        </label>
+        <ul class="nav-link">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Portfolio">Portfolio</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="about" id="about">
+    <h2>About Section</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum esse ex voluptatum itaque dolores, sit eos, quisquam quod perferendis voluptates, consectetur veniam quia porro incidunt beatae eligendi exercitationem repudiandae dicta!</p>
+  </section>
+  <section class="Services" id="Services">
+    <h2>Services Section</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum esse ex voluptatum itaque dolores, sit eos, quisquam quod perferendis voluptates, consectetur veniam quia porro incidunt beatae eligendi exercitationem repudiandae dicta!</p>
+  </section>
+  <section class="Portfolio" id="Portfolio">
+    <h2>Portfolio Section</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum esse ex voluptatum itaque dolores, sit eos, quisquam quod perferendis voluptates, consectetur veniam quia porro incidunt beatae eligendi exercitationem repudiandae dicta!</p>
+  </section>
+  
+  <script>
+    window.addEventListener("scroll",function(){
+      let nav = document.querySelector("nav");
+      nav.classList.toggle("sticky",window.scrollY > 0);
+    });
+  </script>
+
+</body>
+</html>
